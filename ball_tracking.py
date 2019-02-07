@@ -26,9 +26,9 @@ def getCenter(frame,lower,upper):
     return frame,center
 def getFitness(frame):
     frame,centero=getCenter(frame,lowero,uppero)
-    frame,centerb=getCenter(frame,lowerb,upperb)
-    if(len(centerb)==2 and len(centero)==2):
-        fitness=(centero[0]-centerb[0])/frame.shape[1]
+    #frame,centerb=getCenter(frame,lowerb,upperb)
+    if(len(centero)==2):
+        fitness=(centero[0])/frame.shape[1]
     cv2.imshow("d",frame)
-    cv2.waitKey(0)
+    cv2.waitKey(1)
     return fitness
