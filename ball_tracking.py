@@ -31,4 +31,12 @@ def getFitness(frame):
         fitness=(centero[0])/frame.shape[1]
     cv2.imshow("d",frame)
     cv2.waitKey(1)
-    return fitness
+    #return fitness
+
+
+cap=cv2.VideoCapture(1)
+print()
+if(__name__=="__main__"):
+    while 1:
+        ret,frame=cap.read()
+        getFitness(frame)
