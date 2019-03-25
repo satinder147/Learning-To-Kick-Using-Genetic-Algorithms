@@ -13,22 +13,6 @@ c_2.attach(7);
 d_1.attach(8);
 d_2.attach(9);
 
-a_1.write(70);
-delay(500);
-a_2.write(60);
-delay(500);
-b_1.write(70);
-delay(500);
-b_2.write(60);
-delay(500);
-c_1.write(70);
-delay(500);
-c_2.write(60);
-delay(500);
-d_1.write(70);
-delay(500);
-d_2.write(60);
-delay(500);
 }
 
 void loop() {
@@ -45,12 +29,12 @@ if(Serial.available()>0)
     switch(motor)
     {
       case 0:
-        a_1.write(x+60);
+        a_1.write(x+42);
         delay(500);
         //Serial.println("got it");
         break;
       case 1:
-        a_2.write(x);
+        a_2.write(60+x);
         delay(500);
         break;
 
@@ -78,7 +62,7 @@ if(Serial.available()>0)
         delay(500);
         break;
       case 7:
-        d_2.write(x+60);
+        d_2.write(x);
         delay(500);
         break;
       case 9:
