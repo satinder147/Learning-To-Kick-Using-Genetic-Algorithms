@@ -34,6 +34,7 @@ for i in range(4):
     instances.append(dna())
     print(instances[i].motor1,instances[i].motor2)
 while True:
+    rt=cap.read()[1]
     for i in range(len(instances)):
         instances[i].fitness(i,cap)
         time.sleep(2)
@@ -49,4 +50,6 @@ while True:
     reset()
     p=p+1
     print('generation '+str(p)+' completed')
+    #cv2.imshow("final",rt)
+    #cv2.waitKey(1)
     #time.sleep(10)

@@ -1,5 +1,5 @@
 import cv2
-cap=cv2.VideoCapture(1)
+cap=cv2.VideoCapture(0)
 while 1:
     frame=cap.read()[1]
     frame1=frame[135:210,:]
